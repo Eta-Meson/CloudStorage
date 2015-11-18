@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<form method="post">
+Name       : <input id = "name" type="text" name="Name"><br>
+Password   : <input id = "password" type="password" name="Password"><br>
+<input id = "ok" type="submit" value="signin">
+<script type="text/javascript">
+	$("#ok").click(function(){
+		var username = $("#name").val();
+		var password = $("#password").val();
+	$.post({
+  	type: "POST",
+  	url: "http://127.0.0.1:4444/signin",
+  	data: '{"name": "' + username +'","password" : "'+password+'"}',
+  	contentType: "application/json",
+  	success: function() {
+  		console.log("it works !!!");
+  	},
+  	dataType: "json"
+	});
+	console.log($("#name").val());
+});
+</script>
+</form>
+
+<p>PLease sign in</p>
+
+</body>
+</html>
