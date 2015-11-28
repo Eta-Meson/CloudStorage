@@ -1,6 +1,40 @@
-<ul>
-<% for(var i=0; i<list.length; i++) {%>
-	<li><%- link_to(list[i], 'krish/'+list[i]) %></li>
-<% } %>
-</ul>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src="../../js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="../../css/materialize.css"  media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<a class="right" href ='http://127.0.0.1:4444/logout'>logout</a>
+<div class="container z-depth-5">
+  <ul class="collection with-header">
+    <li class="collection-header"><h4>Uploaded Files</h4></li>
+    <% for(var i=0; i<list.length; i++) {%>
+      <li class="collection-item"><%- link_to(list[i], list[i]) %>
+        <span class="right"><%-link_to('Download', list[i]+'/download')%></span>
+      </li> 
+    <%}%>
+  </ul>
+</div>
+
+</body>
+<script type="text/javascript" src="../../js/materialize.js"></script>
+<script type="text/javascript">
+  $(".right").click(function(){
+    Materialize.toast('Downloading', 2000);
+  })
+  $(".collection-item").mouseover(function(){
+    $(this).addClass('active');
+  })
+  $(".collection-item").mouseout(function(){
+    $(this).removeClass('active');
+  })
+
+</script>
+</html>
+
 
