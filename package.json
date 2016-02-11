@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/Eta-Meson/lab-proj#readme",
   "dependencies": {
+    "archiver": "^0.17.0",
     "binaryjs": "^0.2.1",
     "body-parser": "^1.14.1",
+    "compression": "^1.6.0",
     "connect-mongo": "^0.8.2",
     "cookie-parser": "^1.4.0",
     "ejs": "^2.3.4",

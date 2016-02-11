@@ -1,0 +1,14 @@
+Roll number :- 130101039
+Name :-  K.Mohan Sai Krishna
+
+
+FEATURES
+
+1. Materialistic design
+2. Individual file uploading
+3. File storage for multiple users
+4. Streaming 
+5. Downloading
+6. File sharing with other users
+7. Delete files on the server
+
